@@ -1,23 +1,26 @@
-package model;
+package com.workintech.s17d2.model;
 
 public class Developer {
-    private long id;
+    private int id;
     private String name;
     private double salary;
     private Experience experience;
 
-    public Developer(long id, String name, double salary, Experience experience) {
+    public Developer(int id, String name, double salary, Experience experience) {
         this.id = id;
         this.name = name;
         this.salary = salary;
-        this.experience = experience;
+
     }
 
-    public long getId() {
+    public Developer(int id, String name, double salary) {
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

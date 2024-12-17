@@ -1,15 +1,14 @@
-package com.workintech.s17d2.rest;
+package rest;
 
+import com.workintech.s17d2.model.*;
 import jakarta.annotation.PostConstruct;
-import model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import tax.Taxable;
+import com.workintech.s17d2.tax.Taxable;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 @RestController
 public class DeveloperController {
@@ -21,7 +20,7 @@ public class DeveloperController {
         this.taxable = taxable;
     }
 
-    Map<Integer, Developer> developers;
+    public Map<Integer, Developer> developers;
 
     @PostConstruct
     public void init() {
@@ -52,13 +51,13 @@ public class DeveloperController {
 
         switch (experience) {
             case JUNIOR:
-                developer = new JuniorDeveloper(id, name, salary, experience);
+                developer = new JuniorDeveloper(id, name, salary);
                 break;
             case MID:
-                developer = new MidDeveloper(id, name, salary, experience);
+                developer = new MidDeveloper(id, name, salary);
                 break;
             case SENIOR:
-                developer = new SeniorDeveloper(id, name, salary, experience);
+                developer = new SeniorDeveloper(id, name, salary);
                 break;
             default:
                 return "Invalid experience level!";
