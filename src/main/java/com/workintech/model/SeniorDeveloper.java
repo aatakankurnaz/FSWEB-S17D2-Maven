@@ -1,4 +1,4 @@
-package com.workintech.s17d2.model;
+package com.workintech.model;
 
 public class SeniorDeveloper extends Developer{
     public SeniorDeveloper(int id, String name, double salary) {

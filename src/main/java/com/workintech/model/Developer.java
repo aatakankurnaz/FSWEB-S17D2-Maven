@@ -1,10 +1,15 @@
-package com.workintech.s17d2.model;
+package com.workintech.model;
 
 public class Developer {
     private int id;
     private String name;
     private double salary;
+
     private Experience experience;
+
+
+    public Developer() {
+    }
 
     public Developer(int id, String name, double salary, Experience experience) {
         this.id = id;

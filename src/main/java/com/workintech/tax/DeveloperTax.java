@@ -1,4 +1,4 @@
-package com.workintech.s17d2.tax;
+package com.workintech.tax;
 
 import org.springframework.stereotype.Component;
 
